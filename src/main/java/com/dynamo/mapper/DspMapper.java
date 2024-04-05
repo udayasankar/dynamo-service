@@ -2,9 +2,9 @@ package com.dynamo.mapper;
 
 
 
-import com.miq.dynamo.model.DV360CampaignObject;
-import com.miq.dynamo.model.Dv360Campaign;
-import com.miq.dynamo.request.ReqDV360CampaignObject;
+import com.dynamo.model.DV360CampaignObject;
+import com.dynamo.model.Dv360Campaign;
+import com.dynamo.request.ReqDV360CampaignObject;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;
@@ -21,7 +21,7 @@ public interface DspMapper {
     DV360CampaignObject map(ReqDV360CampaignObject reqDV360CampaignObject);
 
     @Named("mapDv360Campaigns")
-    default List<Dv360Campaign> mapDv360Campaigns(List<com.miq.dynamo.request.Dv360Campaign> dv360Campaigns)
+    default List<Dv360Campaign> mapDv360Campaigns(List<com.dynamo.request.Dv360Campaign> dv360Campaigns)
     {
         return dv360Campaigns.stream()
                 .map(this::mapToDto)

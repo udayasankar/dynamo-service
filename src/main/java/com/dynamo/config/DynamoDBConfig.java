@@ -1,4 +1,4 @@
-//package com.miq.dynamo.config;
+package com.dynamo.config;//package com.miq.dynamo.config;
 //
 //import com.amazonaws.auth.AWSCredentials;
 //import com.amazonaws.auth.AWSCredentialsProvider;

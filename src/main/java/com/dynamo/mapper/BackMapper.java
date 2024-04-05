@@ -1,8 +1,8 @@
 package com.dynamo.mapper;
 
-import com.miq.dynamo.model.DV360CampaignObject;
-import com.miq.dynamo.model.Dv360CampaignObjectDto;
-import com.miq.dynamo.request.ReqDV360CampaignObject;
+import com.dynamo.model.DV360CampaignObject;
+import com.dynamo.model.Dv360CampaignObjectDto;
+import com.dynamo.request.ReqDV360CampaignObject;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;
@@ -22,7 +22,7 @@ public interface BackMapper {
         return dv360CampaignObjectDto.getMAdvertiserId();
     }
     @Named("dv360Campaigns")
-    default List<com.miq.dynamo.request.Dv360Campaign> mapDv360Campaigns(List<com.miq.dynamo.model.Dv360Campaign> dv360Campaigns) {
+    default List<com.dynamo.request.Dv360Campaign> mapDv360Campaigns(List<com.dynamo.model.Dv360Campaign> dv360Campaigns) {
         return dv360Campaigns.stream()
                 .map(this::mapToDto)
                 .collect(Collectors.toList());
@@ -30,5 +30,5 @@ public interface BackMapper {
 
     @Mapping(source = "MDisplayName", target = "displayName")
     @Mapping(source = "MEntityStatus", target = "entityStatus")
-    com.miq.dynamo.request.Dv360Campaign mapToDto(com.miq.dynamo.model.Dv360Campaign campaign);
+    com.dynamo.request.Dv360Campaign mapToDto(com.dynamo.model.Dv360Campaign campaign);
 }

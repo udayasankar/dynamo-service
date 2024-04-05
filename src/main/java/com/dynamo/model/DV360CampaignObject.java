@@ -4,7 +4,7 @@ package com.dynamo.model;
 
 import lombok.*;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.*;
-import com.miq.dynamo.model.Dv360CampaignObjectDto;
+import com.dynamo.model.Dv360CampaignObjectDto;
 
 @Builder
 @Getter
