@@ -8,7 +8,7 @@
 		<version>3.1.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.miq.dynamo</groupId>
+	<groupId>com.dynamo</groupId>
 	<artifactId>dynamo-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>dynamo-service</name>
